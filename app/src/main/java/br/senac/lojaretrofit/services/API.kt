@@ -13,7 +13,8 @@ class API {
         get() {
             return Retrofit
                 .Builder()
-                .baseUrl("https://oficinacordova.azurewebsites.net")
+                //.baseUrl("https://oficinacordova.azurewebsites.net")
+                .baseUrl("https://crudcrud.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
@@ -22,6 +23,10 @@ class API {
     val produto: ProdutoService
         get() {
             return retrofit.create(ProdutoService::class.java)
+        }
+    val pessoa: PessoaService
+        get() {
+            return retrofit.create(PessoaService::class.java)
         }
 
 }
